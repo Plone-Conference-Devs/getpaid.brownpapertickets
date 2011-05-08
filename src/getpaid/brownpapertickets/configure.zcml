@@ -1,0 +1,19 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+	   xmlns:five="http://namespaces.zope.org/five">
+
+  <include package="zope.annotation"/>
+
+  <adapter
+     for="getpaid.core.interfaces.IStore"
+     provides=".interfaces.IBPTOptions"
+     factory=".BPTOptions"
+     />
+
+  <adapter
+     for="getpaid.core.interfaces.IStore"
+     provides="getpaid.core.interfaces.IPaymentProcessor"
+     factory=".payment.BPTPaymentProcessor"
+     name="Brown Paper Tickets"
+     />
+
+</configure>
