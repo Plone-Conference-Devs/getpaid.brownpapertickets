@@ -11,5 +11,5 @@ class IBPTOptions(interfaces.IPaymentProcessorOptions):
         )
 
 
-class IBPTEventLineItem(interfaces.ILineItem):
+class IBPTEventLineItem(interfaces.IPayableLineItem):
     """Marker for Brown Paper Tickets event items"""
